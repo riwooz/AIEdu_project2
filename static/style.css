@@ -1,0 +1,8 @@
+#container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+#split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

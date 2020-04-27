@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Oh&Chung - {{ title }} </title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+    <h1><a href="/">Oh&Chung</a></h1>
+
+    <h2> 회원가입 </h2>
+    <form action= "/profile" method = "POST">
+        <p>USER ID : {{id}}</p>
+        <p>USER NAME : {{name}}</p>
+        <p>BIRTHDAY : {{birthdate}}</p>
+        <p>변경할 패스워드를 입력하세요 <input type="text" name = "pw" placeholder="Password"></p>
+        <p>변경할 패스워드를 재입력하세요 <input type="text" name = "repw" placeholder="Retyping Password"></p>
+        <p>직업 : {{profile}} 변경할 프로파일을 입력하세요 <input type="text" name = "profile" placeholder="Profile"></p>
+
+        <button type = "submit">회원정보 수정</button>
+    </form>
+    {{message}}
+</body>
+</html>

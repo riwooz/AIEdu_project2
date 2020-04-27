@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Oh&Chung - {{ title }} </title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+    <h1><a href="/index">Oh&Chung -{{ id }} </a></h1>
+    <div id="container">
+        <div>
+            <ol>
+                {{ menu | safe }}<br>
+                
+            </ol>
+            <a href = "/logout">logout</a>
+        </div>
+        <div>
+            <form action = "/{{title}}", method = "post">
+            <p>{{option}} 검색창 <input type = "text", name = "find" placeholder="검색">
+            <button type = "submit">검색</button>
+            </p>
+
+            </form>
+        <div>
+            {{content | safe}}
+        </div>
+        </div>
+        
+    </div>
+</body>
+</html>

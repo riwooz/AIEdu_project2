@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Oh&Chung - {{ title }} </title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+    <h1><a href="/index">Oh&Chung -{{ id }} </a></h1>
+    <div id="container">
+        <div>
+            <ol>
+                {{ menu | safe }}<br>
+            </ol>
+            <a href = "/logout">logout</a>
+        </div>
+        <div id ="split">
+            <div>
+                <p> <a href="/initGame"><button>START!!!</button></a></p>
+                <form action="/Baseball", method="post">
+                    <p>숫자를 입력하세요 <input type="text", name="number">
+                    <button type="submit">제출</button>
+                    </p>
+                {{ message }}
+            </div>
+            <div>
+                <p>{{ score | safe }}</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
